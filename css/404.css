@@ -1,0 +1,41 @@
+#boton{
+    left: 42%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+#boton span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+#boton::after{
+    content: "";
+    width: 100%;
+    height: 40px;
+    background-color: rgb(57, 195, 230);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -100%;
+    left:  calc(-100% - 88px);
+    border-bottom: 80px solid rgb(57, 195, 230);
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+#boton:hover::after{
+    left: 0;
+}
